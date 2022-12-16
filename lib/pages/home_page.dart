@@ -5,6 +5,11 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
 
+import 'my_electric.dart';
+import 'my_fruites.dart';
+import 'my_makeup.dart';
+import 'my_shoes.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -14,7 +19,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  List<Widget> myTabs = [
+  List<Widget> myTabs = const [
     MyTab(iconPath: '../assets/icon/shoes.png'),
     MyTab(iconPath: '../assets/icon/electronic.png'),
     MyTab(iconPath: '../assets/icon/makeup.png'),
@@ -25,7 +30,6 @@ class _HomePageState extends State<HomePage> {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        backgroundColor: Colors.grey[100],
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -81,7 +85,17 @@ class _HomePageState extends State<HomePage> {
               height: 24.0,
             ),
             //Tab bar
-            TabBar(tabs: myTabs)
+            TabBar(tabs: myTabs),
+            const SizedBox(
+              height: 24.0,
+            ),
+            Expanded(
+                child: TabBarView(children: [
+              myShoes(),
+              myElectric(),
+              myMakeUp(),
+              myFruites(),
+            ]))
           ],
         ),
       ),
