@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ShoesTile extends StatelessWidget {
+class PageTile extends StatelessWidget {
   final String shoesText;
   final String price;
   final ShoeColor;
   final String Image;
-  const ShoesTile(
+  const PageTile(
       {super.key,
       required this.shoesText,
       required this.price,
@@ -31,7 +31,7 @@ class ShoesTile extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 8.0, right: 12.0),
                   child: Container(
                     child: Padding(
-                      padding: const EdgeInsets.all(2.0),
+                      padding: EdgeInsets.all(2.0),
                       child: Text(
                         "\$$price",
                         style: TextStyle(
@@ -40,7 +40,7 @@ class ShoesTile extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                         color: ShoeColor[200],
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                             bottomRight: Radius.circular(12),
                             topRight: Radius.circular(12))),
                   ),
@@ -51,7 +51,7 @@ class ShoesTile extends StatelessWidget {
             // texts
             Text(
               shoesText,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),

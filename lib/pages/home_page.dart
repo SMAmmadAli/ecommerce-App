@@ -20,10 +20,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   List<Widget> myTabs = const [
-    MyTab(iconPath: '../assets/icon/shoes.png'),
-    MyTab(iconPath: '../assets/icon/electronic.png'),
-    MyTab(iconPath: '../assets/icon/makeup.png'),
-    MyTab(iconPath: '../assets/icon/apple.png'),
+    MyTab(
+      iconPath: '../assets/icon/shoes.png',
+      TabName: "Shoes",
+    ),
+    MyTab(iconPath: '../assets/icon/electronic.png', TabName: "PC"),
+    MyTab(iconPath: '../assets/icon/makeup.png', TabName: "MakeUp"),
+    MyTab(iconPath: '../assets/icon/apple.png', TabName: "Fruite"),
   ];
 
   Widget build(BuildContext context) {

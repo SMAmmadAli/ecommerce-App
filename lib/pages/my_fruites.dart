@@ -1,12 +1,13 @@
+import 'package:ecomapp/pages/my_shoes.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/my_gridview.dart';
+
 class myFruites extends StatelessWidget {
-  const myFruites({super.key});
+  myFruites({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Image.asset('../assets/images/shoes/1.jpg'),
-    );
+    return MyGridView();
   }
 }

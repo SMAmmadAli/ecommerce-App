@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../utils/my_gridview.dart';
+
 class myElectric extends StatelessWidget {
-  const myElectric({super.key});
+  myElectric({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("electronic page"),
-    );
+    return MyGridView();
   }
 }
